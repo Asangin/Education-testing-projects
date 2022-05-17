@@ -12,6 +12,8 @@
     <modules>
         <module>playwright-tests</module>
         <module>parallel-junit5-tests</module>
+        <module>wiremock-tests</module>
+        <module>cucumber-tests</module>
     </modules>
 
     <properties>
