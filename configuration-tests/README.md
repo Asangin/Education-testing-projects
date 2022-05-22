@@ -46,3 +46,21 @@ will print to std out:
 Base url: http://custom.env.ua Port: 111
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 s - in com.skryl.edu.TestDemonstration
 ```
+
+## Maven profiles
+
+[Official documentation](https://maven.apache.org/guides/introduction/introduction-to-profiles.html)
+
+Instead of property files, can be used maven profiles, that can contain more sophisticated configuration.
+- Configure variables:
+```xml
+<configuration>
+    <environmentVariables>
+        <env>prod</env>
+    </environmentVariables>
+</configuration>
+```
+- Configure different plugins
+- Configure different properties
+- Java version
+etc...
