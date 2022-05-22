@@ -64,7 +64,7 @@ class MainTest {
 
 
     @Test
-    void getBooks() {
+    void booksTest() {
         var response= RestAssured.given()
                 .accept(ContentType.JSON)
                 .get("http://localhost:3001/api/books");
