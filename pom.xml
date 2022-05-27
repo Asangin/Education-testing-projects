@@ -12,10 +12,11 @@
     <modules>
         <module>playwright-tests</module>
         <module>parallel-junit5-tests</module>
-        <module>wiremock-tests</module>
+        <module>mock-tests</module>
         <module>cucumber-tests</module>
         <module>testcontainers-tests</module>
         <module>configuration-tests</module>
+        <module>generation-tests</module>
     </modules>
 
     <properties>
