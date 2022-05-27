@@ -17,6 +17,7 @@
         <module>testcontainers-tests</module>
         <module>configuration-tests</module>
         <module>generation-tests</module>
+        <module>junit5-tests</module>
     </modules>
 
     <properties>
