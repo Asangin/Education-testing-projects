@@ -9,7 +9,7 @@ Java library to handle configuration [link](http://owner.aeonbits.org/)
 ## Best practice:
 The best way to set up environment configuration is to create a separate property file for every environment
 
-![separate file with environment config variables](docs/environment-properties.png)
+![separate file with environment config variables](pics/environment-properties.png)
 
 Read those environment properties with "owner" library, by creating Java interface:
 ```java

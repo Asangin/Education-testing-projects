@@ -1,0 +1,16 @@
+{
+  "name": "Skryl",
+  "area": "tech blogs",
+  "author": "Dmytro",
+  "id": 52845,
+  "topics": [
+    "java",
+    "golang",
+    "qa",
+    "mac"
+  ],
+  "address": {
+    "city": "Kyiv",
+    "country": "Ukraine"
+  }
+}

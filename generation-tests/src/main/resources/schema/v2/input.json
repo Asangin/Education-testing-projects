@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "title": "Root Schema",
+  "type": "object",
+  "required": [
+    "name",
+    "area",
+    "author",
+    "id",
+    "topics",
+    "address"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "title": "The name Schema",
+      "type": "string"
+    },
+    "area": {
+      "title": "The area Schema",
+      "type": "string"
+    },
+    "author": {
+      "title": "The author Schema",
+      "type": "string"
+    },
+    "id": {
+      "title": "The id Schema",
+      "type": "integer",
+      "minimum": 0
+    },
+    "topics": {
+      "title": "The topics Schema",
+      "type": "array",
+      "items": {
+        "title": "A Schema",
+        "type": "string",
+        "enum": ["java", "golang", "qa", "mac"]
+      }
+    },
+    "address": {
+      "title": "The address Schema",
+      "type": "object",
+      "required": [
+        "city",
+        "country",
+        "email"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "city": {
+          "title": "The city Schema",
+          "type": "string"
+        },
+        "country": {
+          "title": "The country Schema",
+          "type": "string"
+        },
+        "email": {
+          "title": "The email Schema",
+          "type": "string",
+          "format": "email"
+        }
+      }
+    }
+  }
+}
