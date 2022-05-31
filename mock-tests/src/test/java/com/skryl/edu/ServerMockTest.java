@@ -14,7 +14,6 @@ import static org.hamcrest.Matchers.equalTo;
 
 /**
  * @author Skryl D.V. on 2022-05-26
- * Copyright © 2022 Perenio. All rights reserved.
  */
 @ExtendWith(MockServerExtension.class)
 @MockServerSettings(ports = {8787, 8888})

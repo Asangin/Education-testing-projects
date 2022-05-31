@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 
 /**
  * @author Skryl D.V. on 2022-05-17
- * Copyright © 2022 Perenio. All rights reserved.
  */
 public class PlaywrightTests {
     static Playwright playwright;

@@ -12,7 +12,6 @@ import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options
 
 /**
  * @author Skryl D.V. on 2022-05-17
- * Copyright © 2022 Perenio. All rights reserved.
  */
 class WireMockTest {
     private static WireMockServer wireMockServer;

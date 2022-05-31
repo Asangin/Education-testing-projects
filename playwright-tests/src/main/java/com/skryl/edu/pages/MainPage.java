@@ -4,7 +4,6 @@ import com.microsoft.playwright.Page;
 
 /**
  * @author Skryl D.V. on 2022-04-16
- * Copyright © 2022 Perenio. All rights reserved.
  */
 public class MainPage{
     private final Page page;

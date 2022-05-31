@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author Skryl D.V. on 2022-05-04
- * Copyright © 2022 Perenio. All rights reserved.
  */
 public class SecondParallelUnitTest {
     @Test
