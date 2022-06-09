@@ -30,6 +30,11 @@ go run main.go
 docker-compose up
 ```
 
+### Run all tests
+```bash
+mvn clean test --fail-never
+```
+
 
 
 ## Maven
