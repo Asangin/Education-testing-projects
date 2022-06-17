@@ -10,6 +10,7 @@
 So let's run flaky-test.xml with AnnotationTransformer listener that add RetryAnalyzer.class to every test
 ```bash
 mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/flaky-test.xml
+mvn allure:serve
 ```
 
 or we can try re-run mechanism via testng-failed.xml file. To do that need to run test

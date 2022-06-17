@@ -10,24 +10,44 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class FlakyTestCases {
 
+    @BeforeSuite
+    public void suiteSetUp() {
+        System.out.println("BeforeSuite set up");
+    }
+
+    @BeforeTest
+    public void testSetUp() {
+        System.out.println("BeforeTest set up");
+    }
+
     @BeforeClass
-    public static void classSetUp() {
-        System.out.println("Test class set up");
+    public void classSetUp() {
+        System.out.println("BeforeClass set up");
     }
 
     @BeforeMethod
     public void setUp() {
-        System.out.println("Every test method pre-condition");
+        System.out.println("BeforeMethod pre-condition");
+    }
+
+    @AfterSuite
+    public void suiteTearDown() {
+        System.out.println("AfterSuite tear down");
+    }
+
+    @AfterTest
+    public void testTeardown() {
+        System.out.println("AfterTest tear down");
     }
 
     @AfterClass
-    public static void classTearDown() {
-        System.out.println("Test class tear down");
+    public void classTearDown() {
+        System.out.println("AfterClass tear down");
     }
 
     @AfterMethod
     public void tearDown() {
-        System.out.println("Every test method post-condition");
+        System.out.println("AfterMethod post-condition");
     }
 
     @Test(retryAnalyzer = RetryAnalyzer.class)
