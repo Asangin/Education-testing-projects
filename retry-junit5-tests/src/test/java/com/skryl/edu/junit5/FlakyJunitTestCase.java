@@ -1,14 +1,36 @@
 package com.skryl.edu.junit5;
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Skryl D.V. on 2022-06-15
  */
-public class FlakyJunitTestCases {
+public class FlakyJunitTestCase {
+
+    @BeforeAll
+    static void precondition() {
+        System.out.println("BeforeAll precondition");
+    }
+
+    @BeforeEach
+    void setUp() {
+        System.out.println("BeforeEach setup");
+    }
+
+    @AfterAll
+    static void postCondition() {
+        System.out.println("AfterAll postCondition");
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.out.println("AfterEach tearDown");
+    }
 
     @Test
     void test1() {

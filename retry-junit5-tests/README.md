@@ -9,8 +9,8 @@ There is a couple variant we have:
   NOTE : This feature is supported for JUnit 4.x, and (since 3.0.0-M4) JUnit 5.x.
 
 ```bash
-mvn clean test -Dtest=FlakyJunitTestCases
-mvn clean test -Dtest=FlakyJunitTestCases -Dsurefire.rerunFailingTestsCount=3 
+mvn clean test -Dtest=FlakyJunitTestCase
+mvn clean test -Dtest=FlakyJunitTestCase -Dsurefire.rerunFailingTestsCount=3 
 mvn allure:serve
 ```
 
