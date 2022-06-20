@@ -27,4 +27,38 @@ test(method) in such case should be independent. Every "rerunFailingTestsCount" 
 
 - [Test-retry-gradle-plugin](https://github.com/gradle/test-retry-gradle-plugin)
 
-[//]: # (TODO add gradle)
+Adding plugin to build.gradle
+
+```groovy
+plugins {
+    id "org.gradle.test-retry" version "1.4.0"
+}
+```
+
+and configure test retry
+
+```groovy
+tasks.named('test') {
+    useJUnitPlatform() // Use JUnit Platform for unit tests.
+    testLogging.showStandardStreams = true // enable stdout print to console
+    // retry configuration
+    retry {
+        maxRetries = 3
+        maxFailures = 20 // max failure after plugin will stop retry
+        failOnPassedAfterRetry = false // don't show failed tests
+    }
+}
+```
+
+execute the test and look at the result in Allure report retry section
+
+```bash
+../gradlew clean test --tests FlakyJunitTestCase
+../gradlew allureServe
+```
+
+Gradle retry plugin does the same as a Maven retry, runs all tests, retries all failed tests again, and so on...
+Repeatedly run all precondition Before\After methods, but the test should not depend on other tests, only on
+precondition methods.
+
+[//]: # (TODO check lifecycle for suite for maven and gradle plugins)
