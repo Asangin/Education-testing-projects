@@ -13,6 +13,8 @@ public class FlakyJunitTestCase {
     @BeforeAll
     static void precondition() {
         System.out.println("BeforeAll precondition");
+        var actual = Math.round( Math.random() );
+        assertThat(actual).isEqualTo(1);
     }
 
     @BeforeEach

@@ -54,6 +54,8 @@ execute the test and look at the result in Allure report retry section
 
 ```bash
 ../gradlew clean test --tests FlakyJunitTestCase
+```
+```bash
 ../gradlew allureServe
 ```
 
