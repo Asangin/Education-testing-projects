@@ -57,28 +57,28 @@ public class FlakyTestCases {
         assertThat(actual).isEqualTo(1);
     }
 
-    @Test
+    @Test(dependsOnMethods = {"test1"})
     void test2() {
         System.out.println("Flaky test 2");
         var actual = Math.round( Math.random() );
         assertThat(actual).isEqualTo(0);
     }
 
-    @Test
+    @Test(dependsOnMethods = {"test1"})
     void test3() {
         System.out.println("Flaky test 3");
         var actual = Math.round( Math.random() );
         assertThat(actual).isEqualTo(1);
     }
 
-    @Test
+    @Test(dependsOnMethods = {"test1"})
     void test4() {
         System.out.println("Flaky test 4");
         var actual = Math.round( Math.random() );
         assertThat(actual).isEqualTo(0);
     }
 
-    @Test
+    @Test(dependsOnMethods = {"test1"})
     void test5() {
         System.out.println("Flaky test 5");
         var actual = Math.round( Math.random() );

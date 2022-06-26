@@ -1,4 +1,7 @@
 <suite name="My suite" parallel="classes" thread-count="2">
+    <listeners>
+        <listener class-name="com.skryl.edu.utils.AddRetryAnalyzerAnnotation"/>
+    </listeners>
     <test name="Test-class test" >
         <classes>
             <class name="com.skryl.edu.FlakyTestCases" />
