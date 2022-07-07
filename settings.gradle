@@ -9,3 +9,4 @@
 
 rootProject.name = 'edu-testing'
 include('retry-junit5-tests')
+include('junit5-tests')

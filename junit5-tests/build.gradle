@@ -1,0 +1,30 @@
+plugins {
+    // Apply the java-library plugin for API and implementation separation.
+    id 'java-library'
+    id "org.gradle.test-retry" version "1.4.0"
+    id "io.qameta.allure" version "2.10.0"
+}
+
+allure {
+    setVersion("2.18.1")
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.assertj:assertj-core:3.22.0'
+
+    implementation "javax.inject:javax.inject:1"
+    implementation "io.qameta.allure:allure-junit5:2.18.1"
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+}
