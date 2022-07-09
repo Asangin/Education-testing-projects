@@ -13,8 +13,9 @@ public class LoginPage {
     }
 
     public LoginPage goToLoginPage() {
+        var baseUrl = System.getProperty("test.app.url");
         // Go to http://localhost:8080/#/login
-        page.navigate("http://localhost:8080/#/login");
+        page.navigate(baseUrl + "/#/login");
         return this;
     }
 
@@ -39,9 +40,7 @@ public class LoginPage {
     public MainPage clickLogin() {
         // Click button:has-text("Log in")
         // page.waitForNavigation(new Page.WaitForNavigationOptions().setUrl("http://localhost:8080/#/home"), () ->
-        page.waitForNavigation(() -> {
-            page.click("button:has-text(\"Log in\")");
-        });
+        page.waitForNavigation(() -> page.click("button:has-text(\"Log in\")"));
         return new MainPage(page);
     }
 }

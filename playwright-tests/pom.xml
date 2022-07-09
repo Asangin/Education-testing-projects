@@ -25,16 +25,67 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.40.1</version>
+                <configuration>
+                    <images>
+                        <image>
+                            <name>asangin/test-app:latest</name>
+                            <alias>test-app</alias>
+                            <run>
+                                <ports>
+                                    <port>test.app.port:8080</port>
+                                </ports>
+                                <wait>
+                                    <time>10000</time>
+                                    <http>
+                                        <url>http://${docker.host.address}:${test.app.port}/api/health</url>
+                                    </http>
+                                </wait>
+                            </run>
+                        </image>
+                    </images>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>prepare-test-app</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>start</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>remove-test-app</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <systemPropertyVariables>
+                        <!-- Needs to be repeated here (the following line strangely doesn't work when the next
+                        line is omitted although). Maven, you little sneaky beast ... -->
+                        <test.app.port>${test.app.port}</test.app.port>
+
+                        <!-- Map maven variables to system properties which in turn can be used in the test classes -->
+                        <test.app.url>http://localhost:${test.app.port}</test.app.url>
+                    </systemPropertyVariables>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 /**
  * @author Skryl D.V. on 2022-05-17
  */
-public class PlaywrightTests {
+public class PlaywrightIT {
     static Playwright playwright;
     static Browser browser;
 
@@ -41,7 +41,7 @@ public class PlaywrightTests {
     }
 
     @Test
-    void trySelectors() throws InterruptedException {
+    void trySelectors() {
         new LoginPage(page)
                 .goToLoginPage()
                 .enterUserName("test")
@@ -57,10 +57,11 @@ public class PlaywrightTests {
     }
 
     @Test
-    @Disabled
     void playwriteTrace() {
-        try (Playwright playwright = Playwright.create()) {
-            Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(50));
+        try (Playwright playwright = Playwright.create();
+             Browser browser = playwright.chromium()
+                     .launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(50))
+        ) {
             BrowserContext context = browser.newContext();
 
             // Start tracing before creating / navigating a page.
@@ -73,7 +74,7 @@ public class PlaywrightTests {
 
             // Stop tracing and export it into a zip archive.
             context.tracing().stop(new Tracing.StopOptions()
-                    .setPath(Paths.get("trace.zip")));
+                    .setPath(Paths.get("target/trace.zip")));
         }
     }
 }
