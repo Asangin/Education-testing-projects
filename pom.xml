@@ -20,6 +20,7 @@
         <module>junit5-tests</module>
         <module>retry-junit5-tests</module>
         <module>retry-testng-tests</module>
+        <module>selenide-tests</module>
     </modules>
 
     <properties>
