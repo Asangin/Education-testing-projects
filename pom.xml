@@ -21,6 +21,7 @@
         <module>retry-junit5-tests</module>
         <module>retry-testng-tests</module>
         <module>selenide-tests</module>
+        <module>gatling-tests</module>
     </modules>
 
     <properties>
