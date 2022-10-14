@@ -64,3 +64,9 @@ Instead of property files, can be used maven profiles, that can contain more sop
 - Configure different properties
 - Java version
 etc...
+
+## Native properties file for configuration
+
+Read [config.properties](src/main/resources/config.properties) using [TestProperties.class](src/main/java/com/skryl/edu/utils/TestProperties.java)
+
+Example of using in [TestPropertiesFile](src/test/java/com/skryl/edu/TestPropertiesFile.java)
