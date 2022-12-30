@@ -1,0 +1,8 @@
+<suite name="Parallel test classes suite" parallel="classes" thread-count="2">
+    <test name="Parallel test class tests" >
+        <classes>
+            <class name="com.skryl.edu.pkg1.ParallelClassesOneTest" />
+            <class name="com.skryl.edu.pkg2.ParallelClassesTwoTest" />
+        </classes>
+    </test>
+</suite>

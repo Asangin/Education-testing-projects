@@ -22,6 +22,7 @@
         <module>retry-testng-tests</module>
         <module>selenide-tests</module>
         <module>gatling-tests</module>
+        <module>testng-tests</module>
     </modules>
 
     <properties>
