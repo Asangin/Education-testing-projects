@@ -23,6 +23,7 @@
         <module>selenide-tests</module>
         <module>gatling-tests</module>
         <module>testng-tests</module>
+        <module>assertj-tests</module>
     </modules>
 
     <properties>
