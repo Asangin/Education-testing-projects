@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Package scope test suite">
+    <test name="Run all test classes in particular package">
+        <packages>
+            <package name="com.skryl.edu.lifecycles" />
+        </packages>
+    </test>
+</suite>

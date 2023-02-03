@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="test_suite">
+    <test name="Await test">
+        <classes>
+            <class name="com.skryl.edu.lifecycles.LifeCycleTests"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
