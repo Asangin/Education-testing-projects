@@ -11,14 +11,14 @@ public class NestedTests {
 
     @BeforeAll
     static void precondition() {
-        System.out.println("Pre-condition");
-        Allure.step("Pre-condition");
+        System.out.println("Common pre-condition");
+        Allure.step("Common pre-condition");
     }
 
     @AfterAll
     static void postCondition() {
-        System.out.println("Post-condition");
-        Allure.step("Post-condition");
+        System.out.println("Common post-condition");
+        Allure.step("Common post-condition");
     }
 
     @Nested
@@ -27,35 +27,35 @@ public class NestedTests {
 
         @BeforeEach
         void setUp() {
-            System.out.println("setup for suite 1");
-            Allure.step("setup for suite 1");
+            System.out.println("Setup for test in suite 1");
+            Allure.step("Setup for test in suite 1");
         }
 
         @AfterEach
         void tearDown() {
-            System.out.println("teardown for suite 1");
-            Allure.step("teardown for suite 1");
+            System.out.println("Teardown for test in suite 1");
+            Allure.step("Teardown for test in suite 1");
         }
 
         @Test
         @DisplayName("Test 1")
         void verifyThatRegularSubscriptionApplyToAdmin() {
-            System.out.println("Test 1");
-            Allure.step("Test 1");
+            System.out.println("Test 1 in Suite 1");
+            Allure.step("Test 1 in Suite 1");
         }
 
         @Test
         @DisplayName("Test 2")
         void verifyThatRegularSubscriptionApplyToModerator() {
-            System.out.println("Test 2");
-            Allure.step("Test 2");
+            System.out.println("Test 2 in Suite 1");
+            Allure.step("Test 2 in Suite 1");
         }
 
         @Test
         @DisplayName("Test 3")
         void verifyThatRegularSubscriptionApplyToUser1() {
-            System.out.println("Test 3");
-            Allure.step("Test 3");
+            System.out.println("Test 3 in Suite 1");
+            Allure.step("Test 3 in Suite 1");
         }
 
     }
@@ -66,35 +66,35 @@ public class NestedTests {
 
         @BeforeEach
         void setUp() {
-            System.out.println("setup for suite 2");
-            Allure.step("setup for suite 2");
+            System.out.println("Setup for test in suite 2");
+            Allure.step("Setup for test in suite 2");
         }
 
         @AfterEach
         void tearDown() {
-            System.out.println("teardown for suite 2");
-            Allure.step("teardown for suite 2");
+            System.out.println("Teardown for test in suite 2");
+            Allure.step("Teardown for test in suite 2");
         }
 
         @Test
         @DisplayName("Test 1")
         void verifyThatRegularSubscriptionApplyToAdmin() {
-            System.out.println("Test 1");
-            Allure.step("Test 1");
+            System.out.println("Test 1 in Suite 2");
+            Allure.step("Test 1 in Suite 2");
         }
 
         @Test
         @DisplayName("Test 2")
         void verifyThatRegularSubscriptionApplyToModerator() {
-            System.out.println("Test 2");
-            Allure.step("Test 2");
+            System.out.println("Test 2 in Suite 2");
+            Allure.step("Test 2 in Suite 2");
         }
 
         @Test
         @DisplayName("Test 3")
         void verifyThatRegularSubscriptionApplyToUser1() {
-            System.out.println("Test 3");
-            Allure.step("Test 3");
+            System.out.println("Test 3 in Suite 2");
+            Allure.step("Test 3 in Suite 2");
         }
 
     }
