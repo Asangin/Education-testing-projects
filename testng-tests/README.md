@@ -21,4 +21,11 @@ It is discovered that [package](src/test/java/com/skryl/edu/lifecycles) provides
 is running in different circumstances.
 
 Lifecycle execution sequence [LifeCycleTests.java](src/test/java/com/skryl/edu/lifecycles/LifeCycleTests.java)
-Using multiple precondition methods and there execution sequence in [MultipleLifecycleTests.java](src/test/java/com/skryl/edu/lifecycles/MultipleLifecycleTests.java)
+Using multiple precondition methods and there execution sequence
+in [MultipleLifecycleTests.java](src/test/java/com/skryl/edu/lifecycles/MultipleLifecycleTests.java)
+
+## Parametrization test using the data provider
+
+[DataProvider.java](src/test/java/com/skryl/edu/dataprovider/DataProvider.java) contains data that will use in the
+test [DataProviderTests.java](src/test/java/com/skryl/edu/dataprovider/DataProviderTests.java).
+Also, our provider consists of a set of data, and every data value will be run in a separate test.
