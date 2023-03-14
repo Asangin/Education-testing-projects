@@ -4,7 +4,7 @@
 
 Link to [Getting started](https://playwright.dev/java/docs/intro) tutorial
 
-## Setup container with test application with Maven plugin
+## Setup container with test application using Maven plugin
 
 [Maven plugin](https://github.com/fabric8io/docker-maven-plugin)
 [Documentation](http://dmp.fabric8.io/)
