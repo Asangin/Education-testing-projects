@@ -1,4 +1,4 @@
-package com.skryl.edu.listeners;
+package com.skryl.edu.suits;
 
 import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.AfterMethod;
