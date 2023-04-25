@@ -6,4 +6,8 @@
             <class name="com.skryl.edu.suits.AnnotationListenerTest" />
         </classes>
     </test>
+    <listeners>
+        <listener class-name="com.skryl.edu.listeners.CleanUpListener"/>
+        <listener class-name="com.skryl.edu.listeners.AcceptanceTestFilter"/>
+    </listeners>
 </suite>

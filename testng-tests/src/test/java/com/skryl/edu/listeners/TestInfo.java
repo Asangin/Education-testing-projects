@@ -15,21 +15,6 @@ import java.util.regex.Pattern;
 public class TestInfo implements ITestListener {
     private String testNumber;
 
-    private String getTestNumber(ITestResult iTestResult) {
-        try {
-            String testDescription = iTestResult.getMethod().getDescription();
-            Pattern pattern = Pattern.compile("\\d+");
-            Matcher matcher = pattern.matcher(testDescription);
-            if (matcher.find()) {
-                return matcher.group();
-            }
-        } catch (NullPointerException e) {
-            log.error("ERROR: Couldn't get test number, test has empty description.");
-        }
-        return "number not present in description";
-    }
-
-
     @Override
     public void onTestStart(ITestResult iTestResult) {
         testNumber = getTestNumber(iTestResult);
@@ -68,5 +53,19 @@ public class TestInfo implements ITestListener {
     @Override
     public void onFinish(ITestContext iTestContext) {
         log.info("onFinish");
+    }
+
+    private String getTestNumber(ITestResult iTestResult) {
+        try {
+            String testDescription = iTestResult.getMethod().getDescription();
+            Pattern pattern = Pattern.compile("\\d+");
+            Matcher matcher = pattern.matcher(testDescription);
+            if (matcher.find()) {
+                return matcher.group();
+            }
+        } catch (NullPointerException e) {
+            log.error("ERROR: Couldn't get test number, test has empty description.");
+        }
+        return "number not present in description";
     }
 }
