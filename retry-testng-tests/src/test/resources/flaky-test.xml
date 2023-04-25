@@ -1,7 +1,7 @@
 <suite name="My suite" parallel="classes" thread-count="2">
     <test name="Test-class test" >
         <classes>
-            <class name="com.skryl.edu.FlakyTestCases" />
+            <class name="com.skryl.edu.FlakyTest" />
         </classes>
     </test>
 </suite>
