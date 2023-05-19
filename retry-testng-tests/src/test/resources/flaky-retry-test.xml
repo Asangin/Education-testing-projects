@@ -2,6 +2,7 @@
     <listeners>
         <listener class-name="com.skryl.edu.utils.AddRetryAnalyzerAnnotation"/>
         <listener class-name="com.skryl.edu.utils.AllureAttachmentListener"/>
+        <listener class-name="com.skryl.edu.utils.AllureScreenShotListener"/>
     </listeners>
     <test name="Test-class test" >
         <classes>
