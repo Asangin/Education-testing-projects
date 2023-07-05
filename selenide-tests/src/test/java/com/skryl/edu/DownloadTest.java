@@ -32,7 +32,7 @@ public class DownloadTest {
                 .spec(encoding)
                 .get(DOWNLOAD_LINK)
                 .asInputStream();
-        var downloadPath = Paths.get(System.getProperty("user.dir") + "/installer3.msi");
+        var downloadPath = Paths.get(System.getProperty("user.dir") + "/target/installer3.msi");
         Files.copy(msi, downloadPath, StandardCopyOption.REPLACE_EXISTING);
         IOUtils.closeQuietly(msi);
     }
@@ -40,7 +40,7 @@ public class DownloadTest {
     @Test
     void downloadFileFromInternetV2() throws IOException {
         log.info("Start downloading Endpoint agent installer: " + DOWNLOAD_LINK);
-        var downloadPath = Paths.get(System.getProperty("user.dir") + "/installer2.msi");
+        var downloadPath = Paths.get(System.getProperty("user.dir") + "/target/installer2.msi");
         writeImageIfNotExists(
                 downloadPath,
                 DOWNLOAD_LINK
@@ -50,7 +50,7 @@ public class DownloadTest {
     @Test
     void downloadFileFromInternetV3() throws IOException {
         log.info("Start downloading Endpoint agent installer: " + DOWNLOAD_LINK);
-        var downloadPath = Paths.get(System.getProperty("user.dir") + "/installer.msi");
+        var downloadPath = Paths.get(System.getProperty("user.dir") + "/target/installer.msi");
         FileUtils.copyURLToFile(new URL(DOWNLOAD_LINK), downloadPath.toFile());
     }
 
