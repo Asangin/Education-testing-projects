@@ -2,6 +2,7 @@ package com.skryl.edu.suits;
 
 import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 /**
@@ -18,5 +19,10 @@ public class BaseTest {
     @AfterSuite(alwaysRun = true)
     public void suitePostConditions() {
         log.info("AfterSuite");
+    }
+
+    @BeforeMethod
+    public void init() {
+        log.info(getClass().getSimpleName() + " BeforeMethod init");
     }
 }

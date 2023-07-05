@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test  suite">
+    <test name="Lifecycle Sequence Test 1">
+        <classes>
+            <class name="com.skryl.edu.suits.LifecycleSequenceTest"/>
+        </classes>
+    </test>
+    <test name="Lifecycle Sequence Test 2">
+        <classes>
+            <class name="com.skryl.edu.suits.LifecycleTest"/>
+        </classes>
+    </test>
+</suite>
