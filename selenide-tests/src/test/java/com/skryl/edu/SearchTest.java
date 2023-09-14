@@ -2,7 +2,10 @@ package com.skryl.edu;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,6 +17,19 @@ import static com.codeborne.selenide.Selenide.*;
  * @author Skryl D.V. on 2022-09-15
  */
 public class SearchTest {
+
+    @BeforeAll
+    static void selenideAllurePlugin() {
+        SelenideLogger
+                .addListener("AllureSelenide", new AllureSelenide()
+                        .screenshots(true)
+                        .savePageSource(false)
+                );
+    }
+
+    private static SelenideElement getProductByKey(String productKey) {
+        return $("[space='component/product/grid'][key='%s']".formatted(productKey));
+    }
 
     @BeforeEach
     void openHomePage() {
@@ -38,7 +54,7 @@ public class SearchTest {
         $$("[space='component/product/table'] [space='component/product/tiny']").should(CollectionCondition.size(1));
         sleep(5000);
     }
-    
+
     @Test
     public void searchProductByTitleTest() {
         String searchQuery = "Z3X Easy-Jtag Plus";
@@ -48,11 +64,5 @@ public class SearchTest {
         var actualSearchResultTitle = new SearchResultPage().getSearchResultTitle(productKey);
 
         Assertions.assertEquals(productName, actualSearchResultTitle);
-    }
-    
-    
-
-    private static SelenideElement getProductByKey(String productKey) {
-        return $("[space='component/product/grid'][key='%s']".formatted(productKey));
     }
 }
