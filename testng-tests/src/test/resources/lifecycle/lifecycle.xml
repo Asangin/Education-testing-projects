@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite name">
+    <test name="Test name 1">
+        <classes>
+            <class name="com.skryl.edu.lifecycles.LifeCycleTests">
+                <methods>
+                    <include name="test1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test name 2">
+        <classes>
+            <class name="com.skryl.edu.lifecycles.LifeCycleTests">
+                <methods>
+                    <include name="test2" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

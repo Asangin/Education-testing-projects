@@ -21,6 +21,18 @@ public class NestedTests {
         Allure.step("Common post-condition");
     }
 
+    @BeforeEach
+    void beforeEachTest() {
+        System.out.println("Before each test");
+        Allure.step("Before each test");
+    }
+
+    @AfterEach
+    void afterEachTest() {
+        System.out.println("After each test");
+        Allure.step("After each test");
+    }
+
     @Nested
     @DisplayName("Suite 1")
     class Suite1 {

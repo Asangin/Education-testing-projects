@@ -1,11 +1,12 @@
 package com.skryl.edu.lifecycles;
 
+import com.skryl.edu.suits.SuitePrecondition;
 import org.testng.annotations.*;
 
 /**
  * @author Skryl D.V. on 2023-01-20
  */
-public class LifeCycleTests {
+public class LifeCycleTests extends SuitePrecondition {
 
     @BeforeSuite
     void beforeSuite() {
@@ -59,6 +60,10 @@ public class LifeCycleTests {
 
     @Test(groups = {"group 1"})
     void test1() {
-        System.out.println("Test");
+        System.out.println("Test №1");
+    }
+    @Test(groups = {"group 1"})
+    void test2() {
+        System.out.println("Test №2");
     }
 }

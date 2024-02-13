@@ -24,7 +24,9 @@ public class TestInfo implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
+        iTestResult.getMethod().getGroups();
         log.info("===============TEST %s PASSED===============".formatted(testNumber));
+
         // Send result to report
     }
 
