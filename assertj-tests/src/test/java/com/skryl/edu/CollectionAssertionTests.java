@@ -25,4 +25,21 @@ public class CollectionAssertionTests {
                 .as("match substring in string collections")
                 .isTrue();
     }
+
+
+    //TODO how to assert List 1 in List 2, that List 1 contains expected String
+    /**
+     * [
+     *  {
+     *      "types": ["type1", "type2"]
+     *  },
+     *  {
+     *      "types": ["type1"]
+     *  },
+     *  {
+     *      "types": ["type1", "type2", "type3"]
+     *  }
+     * ]
+     * Need to verify that every object in a list has a collection types with type 1
+     */
 }
