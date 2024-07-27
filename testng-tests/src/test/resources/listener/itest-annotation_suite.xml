@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Package scope test suite">
+    <test name="Run all test classes in particular package">
+        <classes>
+            <class name="com.skryl.edu.pkg1.ParallelClassesOneTest" />
+            <class name="com.skryl.edu.pkg1.ParallelMethodTest" />
+            <class name="com.skryl.edu.pkg2.ParallelClassesTwoTest" />
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.skryl.edu.listeners.TestInfo"/>
+    </listeners>
+</suite>

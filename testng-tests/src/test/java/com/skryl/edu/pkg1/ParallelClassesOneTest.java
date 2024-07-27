@@ -1,5 +1,6 @@
 package com.skryl.edu.pkg1;
 
+import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -8,6 +9,7 @@ import org.testng.annotations.Test;
  * @author Skryl D.V. on 2022-05-06
  * Copyright © 2022 All rights reserved.
  */
+@Slf4j
 public class ParallelClassesOneTest {
     @BeforeClass
     public void beforeClass() {

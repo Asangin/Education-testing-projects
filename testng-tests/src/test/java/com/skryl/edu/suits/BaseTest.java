@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 /**
  * @author Skryl D.V. on 2023-04-25
@@ -11,14 +12,19 @@ import org.testng.annotations.BeforeSuite;
 @Slf4j
 public class BaseTest {
 
-    @BeforeSuite(alwaysRun = true)
+    @BeforeSuite
     public void suitePreConditions() {
         log.info("BeforeSuite");
     }
 
-    @AfterSuite(alwaysRun = true)
+    @AfterSuite
     public void suitePostConditions() {
         log.info("AfterSuite");
+    }
+
+    @BeforeTest
+    public void testPrecondition() {
+        log.info("BeforeTest");
     }
 
     @BeforeMethod
