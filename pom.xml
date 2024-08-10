@@ -24,6 +24,7 @@
         <module>gatling-tests</module>
         <module>testng-tests</module>
         <module>assertj-tests</module>
+        <module>reportportal-tests</module>
     </modules>
 
     <properties>
