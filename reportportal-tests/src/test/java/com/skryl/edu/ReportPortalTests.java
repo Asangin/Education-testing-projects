@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 @ExtendWith(ReportPortalExtension.class)
 public class ReportPortalTests {
 
-    private Logger log = LoggerFactory.getLogger(ReportPortalTests.class);
+    private final Logger log = LoggerFactory.getLogger(ReportPortalTests.class);
 
     @Test
     void sendLogToReportPortal() {
